@@ -1,8 +1,9 @@
+// @flow
 import React from 'react';
 import { Search } from '../components/Search/Search';
 import { Card } from '../components/Card/Card';
 
-export const Home = () => {
+export const Home = (): React$Element<any> => {
     const cards = new Array(15)
         .fill('')
         .map((_, index) => index + 1);
