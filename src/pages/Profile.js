@@ -2,11 +2,18 @@ import React, { useContext, useEffect, useMemo } from 'react';
 import { GithubContext } from '../context/github/githubContext';
 import Loader from '../components/UI/Loader/Loader';
 import { Link } from 'react-router-dom';
+import { Repos } from '../components/Repos/Repos';
 
-const imgStyles = {maxWidth: 250};
+const imgStyles = {maxWidth: 200};
 
 export const Profile = ({match}) => {
-    const {getUser, getRepos, loading, user} = useContext(GithubContext);
+    const {
+        getUser,
+        getRepos,
+        loading,
+        user,
+        repos
+    } = useContext(GithubContext);
     const username = useMemo(() => match.params.name, [match]);
 
     useEffect(() => {
@@ -18,6 +25,8 @@ export const Profile = ({match}) => {
     if (loading) {
         return <Loader/>
     }
+
+    console.log(repos);
 
     const {
         name,
@@ -35,21 +44,21 @@ export const Profile = ({match}) => {
     } = user;
 
     return (
-        <div>
+        <div style={{minWidth: '280px'}}>
             <Link to={'/'} className={'btn btn-link'}>Back</Link>
 
             <div className={'card mb-4'}>
                 <div className={'card-body'}>
                     <div className={'row'}>
-                        <div className={'col-sm-3 text-center'}>
+                        <div className={'col-sm-5 col-lg-3 text-center'}>
                             <img style={imgStyles} src={avatar_url} alt={name}/>
                             <h2 className={'card-title'}>{name}</h2>
-                            <h5 className={'card-subtitle text-muted'}>{login}</h5>
+                            <h5 className={'card-subtitle text-muted mb-3'}>{login}</h5>
                             {location &&
                             <p>Location: {location}</p>
                             }
                         </div>
-                        <div className={'col'}>
+                        <div className={'col-sm-7 col-lg-9'}>
                             {bio &&
                             <>
                                 <h3>BIO</h3>
@@ -80,15 +89,17 @@ export const Profile = ({match}) => {
                             </ul>
 
                             <div className={'d-flex flex-column align-items-start'}>
-                                <div className={'badge badge-primary w-25 mb-1'}>Followers: {followers}</div>
-                                <div className={'badge badge-primary w-25 mb-1'}>Following: {following}</div>
-                                <div className={'badge badge-info w-25 mb-1'}>Public repos: {public_repos}</div>
-                                <div className={'badge badge-dark w-25'}>Public gists: {public_gists}</div>
+                                <div className={'badge badge-primary mb-1'}>Followers: {followers}</div>
+                                <div className={'badge badge-primary mb-1'}>Following: {following}</div>
+                                <div className={'badge badge-info mb-1'}>Public repos: {public_repos}</div>
+                                <div className={'badge badge-dark'}>Public gists: {public_gists}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <Repos repos={repos} />
         </div>
     )
 }

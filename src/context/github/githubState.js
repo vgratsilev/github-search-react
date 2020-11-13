@@ -55,7 +55,7 @@ export const GithubState = ({children}) => {
 
         dispatch({
             type: GET_REPOS,
-            payload: response.data.items
+            payload: response.data
         });
     };
 
