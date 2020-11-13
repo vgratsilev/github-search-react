@@ -4,7 +4,7 @@ import { GithubContext } from '../../context/github/githubContext';
 
 export const Search = () => {
     const [value, setValue] = useState('');
-    const {show} = useContext(AlertContext);
+    const alert = useContext(AlertContext);
     const github = useContext(GithubContext);
 
     const onSubmit = (event) => {
@@ -12,11 +12,14 @@ export const Search = () => {
            return;
         }
 
+        github.clearUsers();
+
         if (value.trim()) {
+            alert.hide();
             github.searchUsers(value.trim());
         }
         else {
-            show('Input username');
+            alert.show('Input username');
         }
     };
     return (
@@ -24,7 +27,7 @@ export const Search = () => {
             <input
                 type={'text'}
                 className={'form-control'}
-                placeholder={'Username'}
+                placeholder={'Input username'}
                 onKeyPress={onSubmit}
                 value={value}
 
