@@ -14,7 +14,7 @@ deploy:
   provider: pages
   strategy: git
   cleanup: true
-  token: $GITHUB_TOKEN
+  github_token: $GITHUB_TOKEN
   keep_history: true
   local_dir: build
   on:
