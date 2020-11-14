@@ -13,7 +13,7 @@ script:
 deploy:
   strategy: git
   provider: pages
-  cleanup: false
+  cleanup: true
   token: $GITHUB_TOKEN
   keep_history: true
   local_dir: build
