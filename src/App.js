@@ -11,15 +11,15 @@ function App() {
     return (
         <GithubState>
             <AlertState>
-                <BrowserRouter>
+                <BrowserRouter basename={'/react-hooks'}>
                     <Navbar/>
                     <div className={'container pt-4'}>
                         <Alert alert={{text: 'alert'}}/>
                         <Switch>
-                            <Route path={'/react-hooks'} exact component={Home}/>
-                            <Route path={'/react-hooks/about'} component={About}/>
-                            <Route path={'/react-hooks/profile/:name'} component={Profile}/>
-                            <Redirect to={'/react-hooks'}/>
+                            <Route path={'/'} exact component={Home}/>
+                            <Route path={'/about'} component={About}/>
+                            <Route path={'/profile/:name'} component={Profile}/>
+                            <Redirect to={'/'}/>
                         </Switch>
                     </div>
                 </BrowserRouter>
