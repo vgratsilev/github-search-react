@@ -12,8 +12,9 @@ script:
   - yarn build
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  strategy: git
+  cleanup: true
+  token: $GITHUB_TOKEN
   keep_history: true
   local_dir: build
   on:
