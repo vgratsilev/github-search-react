@@ -26,8 +26,6 @@ export const Profile = ({match}) => {
         return <Loader/>
     }
 
-    console.log(repos);
-
     const {
         name,
         company,

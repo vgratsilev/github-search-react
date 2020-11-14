@@ -1,3 +1,5 @@
+os: linux
+dist: xenial
 language: node_js
 node_js:
   - "stable"
@@ -9,9 +11,10 @@ cache:
 script:
   - yarn build
 deploy:
+  strategy: git
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  cleanup: false
+  token: $GITHUB_TOKEN
   keep_history: true
   local_dir: build
   on:
