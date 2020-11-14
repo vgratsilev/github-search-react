@@ -16,10 +16,10 @@ function App() {
                     <div className={'container pt-4'}>
                         <Alert alert={{text: 'alert'}}/>
                         <Switch>
-                            <Route path={'/'} exact component={Home}/>
-                            <Route path={'/about'} component={About}/>
-                            <Route path={'/profile/:name'} component={Profile}/>
-                            <Redirect to={'/'}/>
+                            <Route path={'/react-hooks'} exact component={Home}/>
+                            <Route path={'/react-hooks/about'} component={About}/>
+                            <Route path={'/react-hooks/profile/:name'} component={Profile}/>
+                            <Redirect to={'/react-hooks'}/>
                         </Switch>
                     </div>
                 </BrowserRouter>
