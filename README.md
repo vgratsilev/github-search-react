@@ -1,5 +1,5 @@
 # Github Search React
-[![Build Status](https://travis-ci.com/vgratsilev/react-hooks.svg?branch=master)](https://travis-ci.com/vgratsilev/react-hooks)
+[![Build Status](https://travis-ci.com/vgratsilev/github-search-react.svg?branch=master)](https://travis-ci.com/vgratsilev/github-search-react)
 
 Github search on React.
 
@@ -10,7 +10,7 @@ Github search on React.
 * CSS Modules with SCSS [node-sass](https://github.com/sass/node-sass).
 * Bootstrap CSS classes and components.
 * Builds with [Travis CI](https://travis-ci.com/).
-* Published on [Git Pages](https://vgratsilev.github.io/react-hooks).
+* Published on [Git Pages](https://vgratsilev.github.io/github-search-react).
 
 ## Available Scripts
 

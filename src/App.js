@@ -11,7 +11,7 @@ function App() {
     return (
         <GithubState>
             <AlertState>
-                <BrowserRouter basename={'/react-hooks'}>
+                <BrowserRouter basename={'/github-search-react'}>
                     <Navbar/>
                     <div className={'container pt-4'}>
                         <Alert alert={{text: 'alert'}}/>
