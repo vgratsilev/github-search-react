@@ -11,7 +11,7 @@ export const Home = () => {
         <div>
             <Search/>
 
-            <div className={'row'}>
+            <div className={'row mt-4'}>
 
                 {loading
                     ? <Loader/>
