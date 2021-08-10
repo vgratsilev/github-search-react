@@ -7,6 +7,8 @@ export const Card = ({user}) => {
             <img
                 src={user.avatar_url}
                 alt={user.login}
+                width={'304px'}
+                height={'304px'}
                 className={'card-img-top'}/>
             <div className={'card-body'}>
                 <h5 className={'class-title'}>{user.login}</h5>

@@ -87,10 +87,10 @@ export const Profile = ({match}) => {
                             </ul>
 
                             <div className={'d-flex flex-column align-items-start'}>
-                                <div className={'badge badge-primary mb-1'}>Followers: {followers}</div>
-                                <div className={'badge badge-primary mb-1'}>Following: {following}</div>
-                                <div className={'badge badge-info mb-1'}>Public repos: {public_repos}</div>
-                                <div className={'badge badge-dark'}>Public gists: {public_gists}</div>
+                                <div className={'badge bg-primary mb-1'}>Followers: {followers}</div>
+                                <div className={'badge bg-primary mb-1'}>Following: {following}</div>
+                                <div className={'badge bg-info mb-1'}>Public repos: {public_repos}</div>
+                                <div className={'badge bg-dark'}>Public gists: {public_gists}</div>
                             </div>
                         </div>
                     </div>
