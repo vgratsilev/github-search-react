@@ -9,7 +9,7 @@ export const Search = () => {
 
     const onSubmit = (event) => {
         if (event.key !== 'Enter') {
-           return;
+            return;
         }
 
         github.clearUsers();
@@ -17,8 +17,7 @@ export const Search = () => {
         if (value.trim()) {
             alert.hide();
             github.searchUsers(value.trim());
-        }
-        else {
+        } else {
             alert.show('Input username');
         }
     };

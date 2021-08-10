@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { AlertContext } from '../../context/alert/alertContext';
 
 export const Alert = () => {
@@ -11,7 +11,7 @@ export const Alert = () => {
     return (
         <div
             className={`alert alert-${alert.type || 'secondary'} alert-dismissible`}
-             role='alert'
+            role='alert'
         >
             {alert.text}
             <button type='button' className='close' aria-label='Close' onClick={hide}>

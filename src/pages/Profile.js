@@ -97,7 +97,7 @@ export const Profile = ({match}) => {
                 </div>
             </div>
 
-            <Repos repos={repos} />
+            <Repos repos={repos}/>
         </div>
     )
 }
